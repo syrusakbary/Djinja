@@ -71,14 +71,16 @@ Running tests::
 		
 In Django
 		
-	``Requests per second:    67.93 [#/sec] (mean)
-Time per request:       14.721 [ms] (mean)``
+	Requests per second:    67.93 [#/sec] (mean)
+	Time per request:       14.721 [ms] (mean)
 
 With Jinja2 (Djinja)
 		
-	``Requests per second:    202.16 [#/sec] (mean)
-Time per request:       4.947 [ms] (mean)``
+	Requests per second:    202.16 [#/sec] (mean)
+	Time per request:       4.947 [ms] (mean)
 
+
+**3x performance using Jinja2 instead of Django templating in administration**
 
 Django Debug Toolbar
 ====================
