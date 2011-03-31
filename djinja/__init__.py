@@ -13,7 +13,7 @@ completely the Django's template system, including administration.
 #Taked majoritarily from Coffin's <http://www.github.com/dcramer/coffin> __init__.py
 
 __all__ = ('__version__', '__build__', '__docformat__', 'get_revision')
-__version__ = (0, 2, 1)
+__version__ = (0, 2, 2)
 __docformat__ = 'restructuredtext en'
 
 import os
