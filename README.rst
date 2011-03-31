@@ -62,20 +62,21 @@ Example configuration::
 	)
 
 
-	Benchmarking
-	------------
-	Running tests::
+Benchmarking
+------------
+
+Running tests::
 		
 		ab -n100 http://localhost/admin/
 		
-	In Django
+In Django
 		
-		``Requests per second:    67.93 [#/sec] (mean)
+	``Requests per second:    67.93 [#/sec] (mean)
 Time per request:       14.721 [ms] (mean)``
 
-    With Jinja2 (Djinja)
+With Jinja2 (Djinja)
 		
-		``Requests per second:    202.16 [#/sec] (mean)
+	``Requests per second:    202.16 [#/sec] (mean)
 Time per request:       4.947 [ms] (mean)``
 
 
