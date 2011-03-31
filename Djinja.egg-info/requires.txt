@@ -1,2 +1,0 @@
-Jinja2
-django>=1.2
