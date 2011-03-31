@@ -1,4 +1,5 @@
 include AUTHORS
 include LICENSE
 include README.rst
-global-exclude *~
+recursive-include djinja/contrib/admin/templates *
+recursive-include djinja/contrib/debug_toolbar/templates *

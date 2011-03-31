@@ -25,7 +25,6 @@ register = Library()
 
 from django.core import urlresolvers
 
-#@register.tag
 def url(viewname,*args,**kwargs):
     try:
         return urlresolvers.reverse(viewname,args=args,kwargs=kwargs)
@@ -33,15 +32,12 @@ def url(viewname,*args,**kwargs):
         return False
 register.tag(url)
 
-#def load(module):
-#    from django.template import get_library
-#    return get_library(module)
-
 class Load(object):
     def __init__(self,module):
         from django.template import get_library
         self._module = get_library(module)
-    
+        #raise Exception(self._module.globals)
+
     @property
     def globals(self):
         return self._module.globals
