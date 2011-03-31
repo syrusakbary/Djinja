@@ -2,8 +2,7 @@
 Djinja
 ======
 
-`Djinja <http://github.com/syrusakbary/djinja>` tries to integrate `Jinja2
-<http://jinja.pocoo.org/2/>` in `Django <http://www.djangoproject.com/>`. The aim is to replace
+Djinja tries to **integrate Jinja2 in Django**. The aim is to replace
 completely the Django's template system, **including administration**.
 
 Currently, the following templating modules have been written and are working:
@@ -44,10 +43,12 @@ Administration
 ==============
 
 For install the Django administration Jinja2 templating just add
-'djinja.contrib.admin' before 'django.contrib.admin' in your INSTALLED_APPS
-in `settings.py`.
 
-Example:
+	``'djinja.contrib.admin',``
+	
+before 'django.contrib.admin' in your INSTALLED_APPS in `settings.py`.
+
+
 	INSTALLED_APPS = (
 	    ...
 	    'djinja.contrib.admin',
@@ -58,18 +59,20 @@ Example:
 Django Debug Toolbar
 ====================
 
-For install the Django Debug Toolbar Jinja2 templating just add
-'djinja.contrib.debug_toolbar' before 'debug_toolbar' in your INSTALLED_APPS
-in `settings.py`.
+For install the Django Debug Toolbar Jinja2 templating just  add
 
-Example:
+	``'djinja.contrib.debug_toolbar',``
+	
+before 'debug_toolbar' in your INSTALLED_APPS in `settings.py`.
+
+
 	INSTALLED_APPS = (
 	    ...
 	    'djinja.contrib.debug_toolbar',
 	    'debug_toolbar',
 	    ...
 	)
-	
+
 TODOs and BUGS
 ==============
 See: http://github.com/syrusakbary/djinja/issues
