@@ -48,6 +48,7 @@ For install the Django administration Jinja2 templating just add
 	
 before 'django.contrib.admin' in your INSTALLED_APPS in `settings.py`.
 
+Example configuration::
 
 	INSTALLED_APPS = (
 	    ...
@@ -65,6 +66,7 @@ For install the Django Debug Toolbar Jinja2 templating just  add
 	
 before 'debug_toolbar' in your INSTALLED_APPS in `settings.py`.
 
+Example configuration::
 
 	INSTALLED_APPS = (
 	    ...
