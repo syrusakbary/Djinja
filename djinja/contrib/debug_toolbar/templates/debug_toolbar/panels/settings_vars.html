@@ -1,0 +1,16 @@
+<table>
+	<thead>
+		<tr>
+			<th>{{ _("Setting") }}</th>
+			<th>{{ _("Value") }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for var in settings.items()|dictsort("0") %}
+			<tr class="{{ loop.cycle('djDebugOdd','djDebugEven') }}">
+				<td>{{ var.0 }}</td>
+				<td><code>{{ var.1|pprint }}</code></td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
