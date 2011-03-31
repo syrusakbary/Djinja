@@ -34,6 +34,10 @@ Installation
    
 #. That's all! ;)
 
+
+**IMPORTANT**: You have to adapt your website templates to Jinja2 or you
+will get an error when rendering.
+
 Configuration
 =============
 
