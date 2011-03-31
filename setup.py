@@ -12,6 +12,8 @@ setup(name='Djinja',
     license='BSD',
     packages=find_packages(),
     install_requires=['Jinja2', 'django>=1.2'],
+    include_package_data=True,
+    zip_safe=False,
     classifiers=[
         "Framework :: Django",
         "Intended Audience :: Developers",

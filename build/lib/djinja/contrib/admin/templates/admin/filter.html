@@ -1,0 +1,7 @@
+<h3>{% trans filter_title=title %} By {{ filter_title }} {% endtrans %}</h3>
+<ul>
+{% for choice in choices %}
+    <li{% if choice.selected %} class="selected"{% endif %}>
+    <a href="{{ choice.query_string|escape }}">{{ choice.display }}</a></li>
+{% endfor %}
+</ul>
