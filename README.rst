@@ -21,7 +21,7 @@ Installation
 
 #. Add the `djinja` directory to your Python path.
 
-#. Add the following template loader to your project's `settings.py` file:
+#. Add the following template loader (**AT TOP OF TEMPLATE_LOADERS**) to your project's `settings.py` file:
 
 	``'djinja.template.loaders.Loader',``
 
