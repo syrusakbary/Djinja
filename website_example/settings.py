@@ -119,8 +119,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    'djinja.contrib.admin',
-    'django.contrib.admin',
+    # 'djinja.contrib.admin',
+    # 'django.contrib.admin',
+    
     # Uncomment the next line to enable the Django Debug Toolbar:
     # 'djinja.contrib.debug_toolbar',
     # 'debug_toolbar',
