@@ -17,16 +17,20 @@ builtins = []
 
 _JINJA_I18N_EXTENSION_NAME = 'jinja2.ext.i18n'
 
+from django.template.context import BaseContext
+def dict_from_context (context):
+    if isinstance(context,BaseContext):
+        d = {}
+        for i in reversed(list(context)):
+            d.update(dict_from_context(i))
+        return d
+    else:
+        return dict(context)
+
 
 class Template(Jinja2Template):
     def render(self, context):
-        # flatten the Django Context into a single dictionary.
-        context_dict = {}
-        for d in context.dicts:
-            context_dict.update(d)
-
-        context_dict['context'] = context
-
+        context_dict = dict_from_context(context)
         if settings.TEMPLATE_DEBUG:
             from django.test import signals
             self.origin = Origin(self.filename)
@@ -197,23 +201,6 @@ class Environment(Jinja2Environment):
 #         
 #     return result
 
-from django.template import Context as DjangoContext
-
-def dict_from_django_context(context):
-    """Flattens a Django :class:`django.template.context.Context` object.
-    """
-    if not isinstance(context, DjangoContext):
-        _dict = {}
-        #        raise Exception(dir(context))
-        for i in context.keys():
-            _dict[i] = context[i]
-        return _dict
-    else:
-        dict_ = {}
-        # Newest dicts are up front, so update from oldest to newest.
-        for subcontext in reversed(list(context)):
-            dict_.update(dict_from_django_context(subcontext))
-        return dict_
         
 class Library(object):
     def __init__(self):
@@ -235,19 +222,18 @@ class Library(object):
         self.extensions.append(ext)
     
     def set(self,*args,**kwargs):
-        for k in kwargs.keys():
+        for k in kwargs.keys(): #is a object with a name
             self[k] = kwargs[k]
+        for a in args:
+            self.tag(a) #is a function
         
     def inclusion_tag(self,template,func,takes_context=False):
         if takes_context:
             import jinja2
             @jinja2.contextfunction
             def tag(context,*args,**kwargs):
-            #kwargs1 ={}
-            #raise Exception(args)
-            #kwargs1['context']= dict_from_django_context(kwargs['context'])
                 from django.template.loader import render_to_string
-                return render_to_string(template, func(dict_from_django_context(context),*args,**kwargs))
+                return render_to_string(template, func(dict_from_context(context),*args,**kwargs))
             
         else:
             def tag(*args,**kwargs):
@@ -259,6 +245,9 @@ class Library(object):
     
     def __setitem__(self, item, value):
         self.globals[item] = value
+    
+    def __getitem__(self, item, value): #for reciprocity with __setitem__
+        return globals[item]
     
 def import_library(taglib_module):
     """Load a template tag library module.

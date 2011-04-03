@@ -61,41 +61,6 @@ class SpacelessExtension(Extension):
         return strip_spaces_between_tags(caller().strip())
 
 register.extension(SpacelessExtension)
-
-class PruebaExtension(Extension):
-    """Changes auto escape rules for a scope."""
-    tags = set(['prueba'])
-
-    def parse(self, parser):
-        #node = nodes.ScopedEvalContextModifier(lineno=next(parser.stream).lineno)
-        #node = nodes.Scope(lineno=next(parser.stream).lineno)
-        #node.options = [
-        #    nodes.Keyword('p', nodes.Const(True))
-        #]
-        #node.body = parser.parse_expression()
-        #node = nodes.ExprStmt(lineno=next(parser.stream).lineno)
-        #return node
-        #node.node = parser.stream.next()
-        #return nodes.Scope([node])
-        #return nodes.Assign(nodes.Name('a', nodes.Const(True)),node)
-        node = nodes.ExprStmt(lineno=next(parser.stream).lineno)
-        #next(parser.stream)
-        assignments = []
-        while parser.stream.current.type != 'block_end':
-            lineno = parser.stream.current.lineno
-            if assignments:
-                parser.stream.expect('comma')
-            #target = parser.parse_assign_target()
-            #parser.stream.expect('assign')
-            expr = parser.parse_expression()
-            raise Exception(expr.as_const())
-            #raise Exception(dir(node.environment))
-            target = nodes.Name()
-            target.ctx = 'store'
-            target.name = 'pa'
-            assignments.append(nodes.Assign(target, expr, lineno=lineno))
-        self.environment.globals.update(ra=2)
-        return assignments
         
 class LoadExtension(Extension):
     """Changes auto escape rules for a scope."""
@@ -109,7 +74,6 @@ class LoadExtension(Extension):
             if modules:
                 parser.stream.expect('comma')
             expr = parser.parse_expression()
-            #raise Exception(expr)
             module = expr.as_const()
             modules.append(module)
 
@@ -126,7 +90,6 @@ class LoadExtension(Extension):
                 f = nodes.Getattr(nodes.Name(m,'load'), i, 'load')
             
                 assignments.append(nodes.Assign(target, f, lineno=lineno))
-        #self.environment.globals.update(ra=2)
 
         return assignments
 register.extension(LoadExtension)

@@ -1,5 +1,4 @@
 from djinja import template
-import jinja2 
 from django.utils.encoding import iri_to_uri
 from django.conf import settings
 

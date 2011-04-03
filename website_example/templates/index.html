@@ -1,0 +1,24 @@
+<div>
+    <h1>Taked from context</h1>
+    <p>
+        Variable context_var: <b>{{context_var}}</b>
+    </p>
+</div>
+<div>
+    <h1>Using Template tags</h1>
+    
+    {% load 'examples' %}
+    
+    <p>
+        Variable var_example: <b>{{var_example}}</b>
+    </p>
+    <p>
+        Basic_tag: <b>{{basic_tag()}}</b>
+    </p>
+    <p>
+        Reverse function applied to variable var_example: <b>{{reverse(var_example)}}</b>
+    </p>
+    <p>
+        Filter reverse function applied to variable var_example: <b>{{var_example|reverse}}</b>
+    </p>
+</div>
