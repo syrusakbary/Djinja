@@ -1,0 +1,26 @@
+- include 'links.html' 
+-# HAML templates can also include,extend,etc HTML templates and viceversa. Isn't amazing?
+
+%strong RENDERING HAML TEMPLATE (index.haml)
+
+%div
+    %h1 Taked from context
+    %p
+        Variable context_var:
+        %b= context_var
+
+%div
+    %h1 Using Template tags
+    - load 'examples'
+    %p
+        Variable var_example:
+        %b= var_example
+    %p
+        Basic_tag:
+        %b= basic_tag() 
+    %p
+        Reverse function applied to variable var_example:
+        %b= reverse(var_example)
+    %p
+        Filter reverse function applied to variable var_example:
+        %b= var_example|reverse

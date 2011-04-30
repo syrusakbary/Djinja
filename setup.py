@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='Djinja',
     version=".".join(map(str, __import__("djinja").__version__)),
-    description='This is a Python module which integrates the Jinja2 templating engine into Django, in a clean way.',
+    description='Jinja2 templates integration in Django (including admin), adding HAML syntax support.',
     long_description=open('README.rst').read(),
     author='Syrus Akbary Nieto',
     author_email='dimension.net@gmail.com',
