@@ -93,3 +93,55 @@ class LoadExtension(Extension):
 
         return assignments
 register.extension(LoadExtension)
+
+
+class HamlishExtension(Extension):
+
+    def __init__(self, environment):
+        super(HamlishExtension, self).__init__(environment)
+
+        environment.extend(
+            hamlish_mode='compact',
+            hamlish_file_extensions=('.haml',),
+            hamlish_indent_string='    ',
+            hamlish_newline_string='\n',
+            hamlish_debug=False,
+            hamlish_enable_div_shortcut=False,
+        )
+
+
+    def preprocess(self, source, name, filename=None):
+    	import os
+        if not os.path.splitext(name)[1] in \
+            self.environment.hamlish_file_extensions:
+            return source
+        c = hamlpy.Compiler()
+        return c.process(source)
+
+try:
+    from hamlpy import hamlpy
+    register.extension(HamlishExtension)
+except:
+	pass
+
+#        h = self.get_preprocessor(self.environment.hamlish_mode)
+#        try:
+#            return h.convert_source(source)
+#        except TemplateIndentationError, e:
+#            raise TemplateSyntaxError(e.message, e.lineno, name=name, filename=filename)
+#        except TemplateSyntaxError, e:
+#            raise TemplateSyntaxError(e.message, e.lineno, name=name, filename=filename)
+
+
+#    def get_preprocessor(self, mode):
+#
+#        if mode == 'compact':
+#            output = Output(indent_string='', newline_string='')
+#        elif mode == 'debug':
+#            output = Output(indent_string='   ', newline_string='\n')
+#        else:
+#            output = Output(indent_string=self.environment.hamlish_indent_string,
+#                        newline_string=self.environment.hamlish_newline_string)
+#
+#        return Hamlish(output, mode == 'debug',
+#                self.environment.hamlish_enable_div_shortcut)

@@ -5,6 +5,8 @@ Djinja
 Djinja tries to **integrate Jinja2 in Django**. The aim is to replace
 completely the Django's template system, **including administration**.
 
+Furthermore, **Djinja can render HAML pages** *.
+
 Currently, the following templating modules have been written and are working:
 
 - Django administration
