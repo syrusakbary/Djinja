@@ -6,7 +6,7 @@ Djinja tries to **integrate Jinja2 in Django**. The aim is to replace
 completely the Django's template system, **including administration**.
 
 Also, **Djinja can render HAML pages**, and is as just **simple** as put the
-**.haml extension** to your template. _* Requires HamlPy_
+**.haml extension** to your template. *Requires HamlPy*
 
 Currently, the following templating modules have been written and are working:
 
@@ -51,8 +51,8 @@ No configuration for now, but is expected in next releases.
 HAML
 ====
 
-If you have installed [HamlPy](https://github.com/jessemiller/HamlPy),
-you can render any HAML-page (*.haml) without any additional configuration.
+If you have installed HamlPy (https://github.com/jessemiller/HamlPy),
+you can render any HAML-page (\*.haml) without any additional configuration.
 
 **HAML templates can also include,extend,etc HTML templates and viceversa.**
 
