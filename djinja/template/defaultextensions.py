@@ -124,6 +124,12 @@ try:
 except:
 	pass
 
+try:
+    from mediagenerator.contrib.jinja2ext import MediaExtension
+    register.extension(MediaExtension)
+except:
+    pass
+
 #        h = self.get_preprocessor(self.environment.hamlish_mode)
 #        try:
 #            return h.convert_source(source)

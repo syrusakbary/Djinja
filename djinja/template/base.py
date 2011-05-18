@@ -2,7 +2,7 @@ import os
 import warnings
 
 from django import dispatch
-from jinja2 import Environment as Jinja2Environment, Template as Jinja2Template, loaders
+from jinja2 import Environment as Jinja2Environment, Template as Jinja2Template, loaders, TemplateSyntaxError
 from django.utils.importlib import import_module
 from django.conf import settings
 from django.template import TemplateDoesNotExist, Origin, InvalidTemplateLibrary
@@ -31,12 +31,15 @@ def dict_from_context (context):
 class Template(Jinja2Template):
     def render(self, context):
         context_dict = dict_from_context(context)
-        if settings.TEMPLATE_DEBUG:
-            from django.test import signals
-            self.origin = Origin(self.filename)
-            signals.template_rendered.send(sender=self, template=self, context=context)
-    
-        return super(Template, self).render(context_dict)
+        try:
+            if settings.TEMPLATE_DEBUG:
+                from django.test import signals
+                self.origin = Origin(self.filename)
+                signals.template_rendered.send(sender=self, template=self, context=context)
+        
+            return super(Template, self).render(context_dict)
+        except Exception as e:
+            raise e
 
 
 class Environment(Jinja2Environment):

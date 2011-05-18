@@ -29,7 +29,6 @@ class Loader(app_directories.Loader):
             raise TemplateDoesNotExist(template_name)
 
 
-
 def make_jinja2_tag(node,*args,**kwargs):
     def f(*args,**kwargs):
         return node(*args,**kwargs).render({})
