@@ -10,6 +10,10 @@ setup(
     url='http://github.com/syrusakbary/djinja',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
+    install_requires=[
+        'Django',
+        'Jinja2',
+    ],
     include_package_data=True,
     zip_safe=False, # because we're including media that Django needs
     classifiers=[

@@ -5,3 +5,4 @@ dist/*
 djinja.esproj
 Djinja.egg-info/*
 */._*
+._*
