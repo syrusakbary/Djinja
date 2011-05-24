@@ -95,6 +95,8 @@ class LoadExtension(Extension):
 register.extension(LoadExtension)
 
 
+
+    
 class HamlishExtension(Extension):
 
     def __init__(self, environment):
@@ -115,14 +117,17 @@ class HamlishExtension(Extension):
         if not os.path.splitext(name)[1] in \
             self.environment.hamlish_file_extensions:
             return source
-        c = hamlpy.Compiler()
+        from extended import haml
+        c = haml.Compiler()
         return c.process(source)
 
 try:
     from hamlpy import hamlpy
-    register.extension(HamlishExtension)
 except:
 	pass
+else:
+    register.extension(HamlishExtension)
+
 
 try:
     from mediagenerator.contrib.jinja2ext import MediaExtension
