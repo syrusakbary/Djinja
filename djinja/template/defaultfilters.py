@@ -10,13 +10,24 @@ from djinja.template.base import Library
 from jinja2.runtime import Undefined
 from django.utils.safestring import mark_safe
 from django.utils.encoding import force_unicode
-
+from django.conf import settings
 register = Library()
 
 @register.filter
 def url(view_name, *args, **kwargs):
-    from coffin.template.defaulttags import url
-    return url._reverse(view_name, args, kwargs)
+    url = ''
+    from django.core.urlresolvers import reverse, NoReverseMatch
+    try:
+        url = reverse(view_name, args=args, kwargs=kwargs)
+    except NoReverseMatch:
+        projectname = settings.SETTINGS_MODULE.split('.')[0]
+        try:
+            url = reverse(projectname + '.' + view_name,
+                          args=args, kwargs=kwargs)
+        except NoReverseMatch:
+            raise
+
+    return url
     
 @register.filter
 def timesince(value, *arg):
@@ -79,6 +90,13 @@ def pluralize(value, s1='s', s2=None):
         if len(value) != 1:
             return plural_suffix
     return singular_suffix
+
+@register.filter
+def firstof(vars):
+    for var in vars:
+        if var:
+            return var
+    return ''
 
 @register.filter
 def floatformat(value, arg=-1):

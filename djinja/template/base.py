@@ -66,28 +66,28 @@ class Environment(Jinja2Environment):
             
         self.template_class = Template
         
-    def _get_loaders(self):
-        """Tries to translate each template loader given in the Django settings
-        (:mod:`django.settings`) to a similarly-behaving Jinja loader.
-        Warns if a similar loader cannot be found.
-        Allows for Jinja2 loader instances to be placed in the template loader
-        settings.
-        """
-        loaders = []
-        
-        #from coffin.template.loaders import jinja_loader_from_django_loader
-
-        from django.conf import settings
-        for loader in settings.TEMPLATE_LOADERS:
-            if isinstance(loader, basestring):
-                #loader_obj = jinja_loader_from_django_loader(loader)
-                if loader_obj:
-                    loaders.append(loader_obj)
-                else:
-                    warnings.warn('Cannot translate loader: %s' % loader)
-            else: # It's assumed to be a Jinja2 loader instance.
-                loaders.append(loader)
-        return loaders
+#    def _get_loaders(self):
+#        """Tries to translate each template loader given in the Django settings
+#        (:mod:`django.settings`) to a similarly-behaving Jinja loader.
+#        Warns if a similar loader cannot be found.
+#        Allows for Jinja2 loader instances to be placed in the template loader
+#        settings.
+#        """
+#        loaders = []
+#        
+#        #from coffin.template.loaders import jinja_loader_from_django_loader
+#
+#        from django.conf import settings
+#        for loader in settings.TEMPLATE_LOADERS:
+#            if isinstance(loader, basestring):
+#                #loader_obj = jinja_loader_from_django_loader(loader)
+#                if loader_obj:
+#                    loaders.append(loader_obj)
+#                else:
+#                    warnings.warn('Cannot translate loader: %s' % loader)
+#            else: # It's assumed to be a Jinja2 loader instance.
+#                loaders.append(loader)
+#        return loaders
 
 
     def _get_templatelibs(self):
