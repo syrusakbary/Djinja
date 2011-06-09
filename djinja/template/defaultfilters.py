@@ -28,7 +28,8 @@ def url(view_name, *args, **kwargs):
             raise
 
     return url
-    
+
+
 @register.filter
 def timesince(value, *arg):
     if value is None or isinstance(value, Undefined):
@@ -98,20 +99,49 @@ def firstof(vars):
             return var
     return ''
 
+from django.utils.safestring import SafeUnicode, SafeData, EscapeData
+from jinja2 import Markup, environmentfilter
+
+#Taked from coffin.interop https://github.com/cdleary/coffin/blob/master/coffin/interop.py
+def django_filter_to_jinja2(filter_func):
+    def _convert(v):
+        if isinstance(v, SafeData):
+            return Markup(v)
+        if isinstance(v, EscapeData):
+            return Markup.escape(v)       # not 100% equivalent, see mod docs
+        return v
+    def conversion_wrapper(*args, **kwargs):
+        result = filter_func(*args, **kwargs)
+        return _convert(result)
+    if hasattr(filter_func, 'needs_autoescape'):
+        @environmentfilter
+        def autoescape_wrapper(environment, *args, **kwargs):
+            kwargs['autoescape'] = environment.autoescape
+            return conversion_wrapper(*args, **kwargs)
+        return autoescape_wrapper
+    else:
+        return conversion_wrapper
+
+
 @register.filter
 def floatformat(value, arg=-1):
     """Builds on top of Django's own version, but adds strict error
     checking, staying with the philosophy.
     """
     from django.template.defaultfilters import floatformat
-    from coffin.interop import django_filter_to_jinja2
     arg = int(arg)  # raise exception
     result = django_filter_to_jinja2(floatformat)(value, arg)
     if result == '':  # django couldn't handle the value
         raise ValueError(value)
     return result
-    
+
+@register.filter
+def jsencode (value):
+    import urllib
+    value = 'document.write("%s")' % value
+    encoded = urllib.quote(unicode(value).encode('utf-8'))
+    return '<script>eval(decodeURIComponent("%s"));</script>'% encoded
 from djinja.template.base import import_library
 django_filters = import_library('django.template.defaultfilters').filters
 for filter in django_filters.keys():
-    register.filter(django_filters[filter])
+    register.filter(django_filter_to_jinja2(django_filters[filter]))

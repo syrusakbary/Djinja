@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name='Djinja',
     version=".".join(map(str, __import__("djinja").__version__)),
-    description='Easy Jinja2 templates integration in Django (including admin), with HAML syntax support.',
+    description='A package that makes possible the integration of Jinja2 in Django, in a clean way.',
     long_description=open('README.rst').read(),
     author='Syrus Akbary Nieto',
-    author_email='dimension.net@gmail.com',
+    author_email='me@syrusakbary.com',
     url='http://github.com/syrusakbary/djinja',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),

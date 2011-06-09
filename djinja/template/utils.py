@@ -1,7 +1,7 @@
 from django.template.base import *
 from django.template.defaulttags import *
-from django.template.loader_tags import *
 from django.templatetags.i18n import TranslateNode, BlockTranslateNode
+from django.template.loader_tags import ExtendsNode,IncludeNode,ConstantIncludeNode,BlockNode
 
 #l = Library()
 #l.simple_tag(lambda x:x)

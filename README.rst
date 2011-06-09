@@ -5,18 +5,12 @@ Djinja
 Djinja tries to **integrate Jinja2 in Django**. The aim is to replace
 completely the Django's template system, **including administration**.
 
-Also, **Djinja can render HAML pages**, and is as just **simple** as put the
-**.haml extension** to your template. *Requires HamlPy*
-
 Currently, the following templating modules have been written and are working:
 
 - Django administration
 - Django Debug Toolbar
 
-Furthermore, is planned to implement one Django management command (**NOT CURRENTLY**):
-
-- `compiletemplates`: Compile the Jinja2 templates for completely fast views in your website.
-
+In a near future, you could convert **Django templates syntax to Jinja2 syntax**, isn't awesome?
 
 If you have ideas please let us know.
 
@@ -40,30 +34,59 @@ Installation
 
 
 **IMPORTANT**: You have to adapt your website templates to Jinja2 or you
-will get an error when rendering.
+will get an error when rendering (until the djinja converser is ready).
 
-Configuration
-=============
+Custom filters and extensions
+=============================
 
-No configuration for now, but is expected in next releases. 
+Djinja uses the same templatetag library approach as Django, meaning
+your app has a ``templatetags`` directory, and each of it's modules
+represents a "template library", providing new filters and tags.
 
+A custom ``Library`` class in ``djinja.template.Library`` can be used
+to register Jinja-specific components.
+
+Djinja can automatically make your existing Django filters usable in
+Jinja, but not your custom tags - you need to rewrite those as Jinja
+extensions manually.
+
+Example for a Jinja-enabled template library::
+
+    from djinja import template
+    register = template.Library()
+
+    register.filter(plenk, 'plenk')   		# Filter function
+    register.extension(FooExtension)        	# Jinja version of the tag
+    register.tag(my_function_name) 		# A global function/object
+    register.set(a='hello') 			# A context variable (named a)
+
+You may also define additional extensions, filters, tests, and globas via your ``settings.py``::
+
+    JINJA2_FILTERS = (
+        'path.to.myfilter',
+    )
+    JINJA2_EXTENSIONS = (
+        'jinja2.ext.do',
+    )
 
 HAML
 ====
 
-If you have installed HamlPy (https://github.com/jessemiller/HamlPy),
-you can render any HAML-page (\*.haml) without any additional configuration.
+Djinja can render HAML pages (having installed ``HamlPy`` - https://github.com/jessemiller/HamlPy), and is as just simple as put the .haml extension to your template and adding ``'djinja.template.extensions.haml'`` in the JINJA2_EXTENSIONS variable of your settings::
+
+
+   JINJA2_EXTENSIONS = (
+	...
+        'djinja.template.extensions.haml',
+	...
+    )
 
 **HAML templates can also include,extend,etc HTML templates and viceversa.**
 
 Administration
 ==============
 
-For install the Django administration Jinja2 templating just add
-
-	``'djinja.contrib.admin',``
-	
-before 'django.contrib.admin' in your INSTALLED_APPS in `settings.py`.
+For install the Django administration Jinja2 templating just add ``'djinja.contrib.admin',`` before 'django.contrib.admin' in your INSTALLED_APPS in `settings.py`.
 
 Example configuration::
 
@@ -79,8 +102,8 @@ Benchmarking
 ------------
 
 Running tests::
-		
-		ab -n100 http://localhost/admin/
+	
+	ab -n100 http://localhost/admin/
 		
 In Django
 		
@@ -98,11 +121,7 @@ With Jinja2 (Djinja)
 Django Debug Toolbar
 ====================
 
-For install the Django Debug Toolbar Jinja2 templating just  add
-
-	``'djinja.contrib.debug_toolbar',``
-	
-before 'debug_toolbar' in your INSTALLED_APPS in `settings.py`.
+For install the Django Debug Toolbar Jinja2 templating just  add ``'djinja.contrib.debug_toolbar',`` before 'debug_toolbar' in your INSTALLED_APPS in `settings.py`.
 
 Example configuration::
 
