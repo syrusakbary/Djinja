@@ -128,6 +128,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+JINJA2_EXTENSIONS = (
+    'jinja2.ext.autoescape',
+    'djinja.template.extensions.haml',
+)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
