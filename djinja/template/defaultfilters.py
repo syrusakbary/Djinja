@@ -69,6 +69,7 @@ def truncatewords_html(value, length):
     from django.utils.text import truncate_html_words
     return truncate_html_words(value, int(length))
 
+
 @register.filter
 def pluralize(value, s1='s', s2=None):
     """Like Django's pluralize-filter, but instead of using an optional
@@ -141,7 +142,8 @@ def jsencode (value):
     value = 'document.write("%s")' % value
     encoded = urllib.quote(unicode(value).encode('utf-8'))
     return '<script>eval(decodeURIComponent("%s"));</script>'% encoded
+
 from djinja.template.base import import_library
 django_filters = import_library('django.template.defaultfilters').filters
-for filter in django_filters.keys():
-    register.filter(django_filter_to_jinja2(django_filters[filter]))
+for _filter in django_filters.keys():
+    register.filter(django_filter_to_jinja2(django_filters[_filter]),name=_filter)

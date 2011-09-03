@@ -6,3 +6,4 @@ djinja.esproj
 Djinja.egg-info/*
 */._*
 ._*
+*.sublime-project

@@ -1,4 +1,5 @@
 <p class="paginator">
+{% load 'admin_list' %}
 {% if pagination_required %}
 {% for i in page_range %}
     {{ paginator_number(cl,i) }}

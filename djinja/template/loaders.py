@@ -7,6 +7,7 @@ from django.template.loaders import app_directories
 from django.conf import settings
 from django.template import TemplateDoesNotExist
 from jinja2 import nodes
+from djinja.template import get_env
 from djinja.template import Environment
 import jinja2
 
@@ -19,9 +20,9 @@ from djinja.template.defaultfunctions import url
 
 class Loader(app_directories.Loader):
     is_usable = True
-    env = Environment(loader=jinja2.FileSystemLoader(app_template_dirs),extensions=['jinja2.ext.i18n'])
-    
+    env = get_env()
     def load_template(self, template_name, template_dirs=None):
+        #raise Exception(self.env)
         try:
             template = self.env.get_template(template_name)
             return template, template.filename

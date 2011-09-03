@@ -40,11 +40,11 @@ var DEBUG_TOOLBAR_MEDIA_URL = "{{ DEBUG_TOOLBAR_MEDIA_URL }}";
 			<div id="{{ panel.dom_id() }}" class="panelContent">
 				<div class="djDebugPanelTitle">
 					<a href="" class="djDebugClose">{{ _("Close") }}</a>
-					<h3>{{ panel.title()|escape }}</h3>
+					<h3>{{ panel.title() }}</h3>
 				</div>
 				<div class="djDebugPanelContent">
 				    <div class="scroll">
-				        {{ panel.content()|escape }}
+				        {{ panel.content() }}
 				    </div>
 				</div>
 			</div>

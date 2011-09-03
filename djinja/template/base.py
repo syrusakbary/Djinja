@@ -2,7 +2,7 @@ import os
 import warnings
 
 from django import dispatch
-from jinja2 import Environment as Jinja2Environment, Template as Jinja2Template, loaders, TemplateSyntaxError
+from jinja2 import Environment as Jinja2Environment, Template as Jinja2Template, loaders, TemplateSyntaxError, FileSystemLoader
 from django.utils.importlib import import_module
 from django.conf import settings
 from django.template import TemplateDoesNotExist, Origin, InvalidTemplateLibrary
@@ -12,7 +12,6 @@ __all__ = [
     'env',
 ]
 
-env = None
 builtins = []
 
 _JINJA_I18N_EXTENSION_NAME = 'jinja2.ext.i18n'
@@ -31,16 +30,12 @@ def dict_from_context (context):
 class Template(Jinja2Template):
     def render(self, context):
         context_dict = dict_from_context(context)
-        try:
-            if settings.TEMPLATE_DEBUG:
-                from django.test import signals
-                self.origin = Origin(self.filename)
-                signals.template_rendered.send(sender=self, template=self, context=context)
-        
-            return super(Template, self).render(context_dict)
-        except Exception as e:
-            raise e
-
+        if settings.TEMPLATE_DEBUG:
+            from django.test import signals
+            self.origin = Origin(self.filename)
+            signals.template_rendered.send(sender=self, template=self, context=context)
+    
+        return super(Template, self).render(context_dict)
 
 class Environment(Jinja2Environment):
     def __init__(self, filters={}, globals={}, tests={}, loader=None, extensions=[], **kwargs):
@@ -173,36 +168,23 @@ class Environment(Jinja2Environment):
             globals=globals,
             tests=tests,
         )
+env = None
 
-# def get_env():
-#     """
-#     :return: A Jinja2 environment singleton.
-#     """
-#     from django.conf import settings
-# 
-#     kwargs = {
-#         'autoescape': True,
-#     }
-#     kwargs.update(getattr(settings, 'JINJA2_ENVIRONMENT_OPTIONS', {}))
-# 
-#     result = Environment(**kwargs)
-#     # Hook Jinja's i18n extension up to Django's translation backend
-#     # if i18n is enabled; note that we differ here from Django, in that
-#     # Django always has it's i18n functionality available (that is, if
-#     # enabled in a template via {% load %}), but uses a null backend if
-#     # the USE_I18N setting is disabled. Jinja2 provides something similar
-#     # (install_null_translations), but instead we are currently not
-#     # enabling the extension at all when USE_I18N=False.
-#     # While this is basically an incompatibility with Django, currently
-#     # the i18n tags work completely differently anyway, so for now, I
-#     # don't think it matters.
-#     #if settings.USE_I18N:
-#     #    from django.utils import translation
-#     #    result.install_gettext_translations(translation)
-#     #else:
-#     result.install_null_translations(newstyle=False)
-#         
-#     return result
+def get_env():
+    global env
+    if env is None:
+        from django.conf import settings
+        from django.template.loaders import app_directories
+        app_template_dirs = app_directories.app_template_dirs + settings.TEMPLATE_DIRS
+        kwargs = {
+            'autoescape': False,
+            'loader':FileSystemLoader(app_template_dirs),
+            'extensions':['jinja2.ext.i18n']
+        }
+        kwargs.update(getattr(settings, 'JINJA2_ENVIRONMENT_OPTIONS', {}))
+        env = Environment(**kwargs)
+    return env
+
 
         
 class Library(object):
@@ -283,6 +265,4 @@ def add_to_builtins(module):
 add_to_builtins('djinja.template.defaultfunctions')
 add_to_builtins('djinja.template.defaultextensions')
 add_to_builtins('djinja.template.defaultfilters')
-
 #env = get_env()
-

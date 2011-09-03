@@ -1,0 +1,1011 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ge",
+				"get_env  (function)"
+			],
+			[
+				"ba",
+				"base  (module)"
+			],
+			[
+				"template",
+				"template  (module)"
+			],
+			[
+				"djinja",
+				"djinja  (module)"
+			],
+			[
+				"none",
+				"none  (value)"
+			],
+			[
+				"disp",
+				"display:   (property)"
+			],
+			[
+				"margin",
+				"-webkit-margin-top-collapse:   (property)"
+			],
+			[
+				"left",
+				"left  (value)"
+			],
+			[
+				"le",
+				"inherit  (value)"
+			],
+			[
+				"floa",
+				"float:   (property)"
+			],
+			[
+				"inline",
+				"inline  (value)"
+			],
+			[
+				"display",
+				"display:   (property)"
+			],
+			[
+				"h1",
+				"h1  (element)"
+			],
+			[
+				"bottom",
+				"bottom:   (property)"
+			],
+			[
+				"ab",
+				"absolute  (value)"
+			],
+			[
+				"posi",
+				"position:   (property)"
+			],
+			[
+				"font",
+				"font-family:   (property)"
+			],
+			[
+				"bl",
+				"block  (value)"
+			],
+			[
+				"dispp",
+				"display:   (property)"
+			],
+			[
+				"li",
+				"li  (element)"
+			],
+			[
+				"m",
+				"force_insert  (argument)"
+			],
+			[
+				"Lan",
+				"Language  (class)"
+			],
+			[
+				"C",
+				"Country  (class)"
+			],
+			[
+				"Media",
+				"Media  (class)"
+			],
+			[
+				"models",
+				"models  (module)"
+			],
+			[
+				"media",
+				"media  (module)"
+			],
+			[
+				"sa",
+				"save  (function)"
+			],
+			[
+				"name",
+				"name  (variable)"
+			],
+			[
+				"person",
+				"person  (variable)"
+			],
+			[
+				"Me",
+				"MediaCountry  (class)"
+			],
+			[
+				"Med",
+				"MediaActor  (class)"
+			],
+			[
+				"L",
+				"Language  (class)"
+			],
+			[
+				"os",
+				"os  (directory)"
+			],
+			[
+				"line",
+				"line-stacking:   (property)"
+			],
+			[
+				"lin",
+				"line-stacking:   (property)"
+			],
+			[
+				"moz",
+				"-moz-transition:   (property)"
+			],
+			[
+				"color",
+				"color: color: hex"
+			],
+			[
+				"top",
+				"border-top:   (property)"
+			],
+			[
+				"overflo",
+				"overflow-style:   (property)"
+			],
+			[
+				"tex",
+				"text-align:   (property)"
+			],
+			[
+				"cen",
+				"center  (value)"
+			],
+			[
+				"text",
+				"text-align:   (property)"
+			],
+			[
+				"rel",
+				"relative  (value)"
+			],
+			[
+				"pos",
+				"position:   (property)"
+			],
+			[
+				"center",
+				"center  (value)"
+			],
+			[
+				"c",
+				"scroll  (value)"
+			],
+			[
+				"no",
+				"no-repeat  (value)"
+			],
+			[
+				"bac",
+				"background:   (property)"
+			],
+			[
+				"webkit",
+				"-webkit-background-clip:   (property)"
+			],
+			[
+				"hei",
+				"height:   (property)"
+			],
+			[
+				"block",
+				"block  (value)"
+			],
+			[
+				"b",
+				"inline-block  (value)"
+			],
+			[
+				"dis",
+				"display:   (property)"
+			],
+			[
+				"pad",
+				"padding:   (property)"
+			],
+			[
+				"spa",
+				"span  (element)"
+			],
+			[
+				"ri",
+				"right  (value)"
+			],
+			[
+				"float",
+				"float:   (property)"
+			],
+			[
+				"extra",
+				"textarea  (element)"
+			],
+			[
+				"a",
+				"a  (element)"
+			],
+			[
+				"position",
+				"position:   (property)"
+			],
+			[
+				"h3",
+				"h3  (element)"
+			],
+			[
+				"weig",
+				"font-weight:   (property)"
+			],
+			[
+				"h6",
+				"h6  (element)"
+			],
+			[
+				"h5",
+				"h5  (element)"
+			],
+			[
+				"h4",
+				"h4  (element)"
+			],
+			[
+				"h2",
+				"h2  (element)"
+			],
+			[
+				"bott",
+				"bottom:   (property)"
+			],
+			[
+				"abs",
+				"absolute  (value)"
+			],
+			[
+				"psi",
+				"position:   (property)"
+			],
+			[
+				"lef",
+				"left  (value)"
+			],
+			[
+				"flo",
+				"float:   (property)"
+			],
+			[
+				"r",
+				"inherit  (value)"
+			],
+			[
+				"imp",
+				"imp  (module)"
+			],
+			[
+				"django",
+				"django  (module)"
+			],
+			[
+				"mod",
+				"documents  (module)"
+			],
+			[
+				"website",
+				"website  (module)"
+			],
+			[
+				"from",
+				"fractions  (module)"
+			],
+			[
+				"low",
+				"lower  (function)"
+			],
+			[
+				"array",
+				"array  (module)"
+			],
+			[
+				"addres",
+				"AddressBook  (module)"
+			],
+			[
+				"sys",
+				"sys  (module)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/syrus/Proyectos/djinja/.gitignore",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/template/loaders.py",
+			"settings":
+			{
+				"buffer_size": 1051,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/template/base.py",
+			"settings":
+			{
+				"buffer_size": 9919,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/template/__init__.py",
+			"settings":
+			{
+				"buffer_size": 178,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templatetags/admin_list.py",
+			"settings":
+			{
+				"buffer_size": 654,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/base.html",
+			"settings":
+			{
+				"buffer_size": 3544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/login.html",
+			"settings":
+			{
+				"buffer_size": 1697,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/pagination.html",
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templatetags/log.py",
+			"settings":
+			{
+				"buffer_size": 540,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/debug_toolbar/templates/debug_toolbar/panels/settings_vars.html",
+			"settings":
+			{
+				"buffer_size": 341,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/debug_toolbar/templates/debug_toolbar/panels/sql.html",
+			"settings":
+			{
+				"buffer_size": 2796,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/syrus/Proyectos/djinja/djinja/template/defaultfilters.py",
+			"settings":
+			{
+				"buffer_size": 4783,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392,
+		"selected_items":
+		[
+		],
+		"width": 392
+	},
+	"console":
+	{
+		"height": 0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": true,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/500.html",
+		"/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/base.html",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/media.haml",
+		"/Users/syrus/Proyectos/mediante.com/example.py",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/search/indexes/media/media_text.txt",
+		"/Users/syrus/Proyectos/mediante.com/website/media/search_indexes.py",
+		"/Users/syrus/Proyectos/mediante.com/website/media/dump.py",
+		"/Users/syrus/Proyectos/mediante.com/website/media/models.py",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/text.css",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/lion-menu",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/search/indexes/media/media.text",
+		"/Users/syrus/Proyectos/mediante.com/website/media/admin.py",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/main.haml",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/search/indexes/prueba/dog_text.txt",
+		"/Users/syrus/Proyectos/mediante.com/website/prueba/admin.py",
+		"/Users/syrus/Proyectos/mediante.com/website/urls.py",
+		"/Users/syrus/Proyectos/mediante.com/website/search_sites.py",
+		"/Users/syrus/Proyectos/mediante.com/website/settings.py",
+		"/Users/syrus/Proyectos/mediante.com/requirements.pip",
+		"/Users/syrus/Proyectos/mediante.com/website/prueba/templates/search/indexes/prueba/dog_text.txt",
+		"/Users/syrus/Proyectos/mediante.com/website/prueba/search_indexes.py",
+		"/Users/syrus/Proyectos/mediante.com/website/prueba/models.py",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/header.css",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/base.css",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/footer.css",
+		"/Users/syrus/Proyectos/mediante.com/website/prueba/admin",
+		"/Volumes/www.ucm.es/.xemacs/phpshell-2.2/config.php",
+		"/Users/syrus/Downloads/phpshell-2.2/phpshell.php",
+		"/Volumes/www.ucm.es/.xemacs/dos/phpterm.php",
+		"/Volumes/www.ucm.es/.xemacs/phpshell-2.2/phpshell.php",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/definition.haml",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/definition.css",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/explore.css",
+		"/Volumes/www.ucm.es/.xemacs/init.el",
+		"/Users/syrus/Downloads/Sansation-fontfacekit/stylesheet.css",
+		"/Users/syrus/Proyectos/mediante.com/website/templates/base.haml",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/webfonts.css",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/explore.py",
+		"/Users/syrus/Sites/syrusakbary/website/templates/main.haml",
+		"/Users/syrus/Sites/syrusakbary/website/settings.py",
+		"/Users/syrus/Proyectos/mediante.com/static/media/css/demo.html",
+		"/Users/syrus/Sites/syrusakbary/website/urls.py",
+		"/Users/syrus/Proyectos/mediante.com/.gitignore",
+		"/Users/syrus/Library/Application Support/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/Users/syrus/Proyectos/faceted/prueba1/fSphinx/tutorial/sql/_build_from_imdb.sql",
+		"/Users/syrus/Proyectos/faceted/prueba1/fSphinx/tutorial/prueba1.py",
+		"/Users/syrus/Proyectos/faceted/prueba1/fSphinx/tutorial/README.md",
+		"/Users/syrus/Proyectos/faceted/prueba1/fSphinx/tutorial/sql/imdb_top400.data.sql",
+		"/Users/syrus/Proyectos/faceted/prueba1/fSphinx/tutorial/sphinxapi.py",
+		"/Users/syrus/Proyectos/mediante.com/website/manage.py",
+		"/Users/syrus/Library/Application Support/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/Users/syrus/Library/Application Support/Sublime Text 2/Packages/User/Global.sublime-settings",
+		"/Users/syrus/Proyectos/concurso/tuenti/11/program.py",
+		"/Users/syrus/Proyectos/concurso/tuenti/1/program.py",
+		"/Users/syrus/Proyectos/concurso/tuenti/README.rst",
+		"/Users/syrus/Sites/exercita/website/exercises/admin.py",
+		"/Users/syrus/Sites/exercita/website/documents/models.py",
+		"/Users/syrus/Sites/exercita/__init__.py",
+		"/Users/syrus/Sites/exercita/static/documents/document.dvi",
+		"/Users/syrus/Sites/exercita/prueba.py",
+		"/Users/syrus/Sites/exercita/.gitignore",
+		"/Users/syrus/Sites/exercita/manage.py",
+		"/Users/syrus/Sites/exercita/requirements.txt",
+		"/Users/syrus/Sites/syrusakbary/manage.py",
+		"/Users/syrus/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 33
+	},
+	"find_in_files":
+	{
+		"height": 0,
+		"include_history":
+		[
+		],
+		"location_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"urlencode",
+			"display",
+			"_get_templatelibs",
+			"Environment",
+			"flash",
+			"rmtp",
+			"silverligh",
+			"flashName",
+			"../images/",
+			"url(",
+			"clear",
+			"mysql",
+			"$c2",
+			"my_sql",
+			"password",
+			"username",
+			"ss",
+			"adf"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"../images/player/",
+			"url(../images/"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/syrus/Proyectos/djinja/.gitignore",
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/template/loaders.py",
+					"settings":
+					{
+						"buffer_size": 1051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								566
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/template/base.py",
+					"settings":
+					{
+						"buffer_size": 9919,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8480,
+								8480
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 2510,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/template/__init__.py",
+					"settings":
+					{
+						"buffer_size": 178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								178
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/__init__.py",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templatetags/admin_list.py",
+					"settings":
+					{
+						"buffer_size": 654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								653,
+								654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/base.html",
+					"settings":
+					{
+						"buffer_size": 3544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2116,
+								2116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/login.html",
+					"settings":
+					{
+						"buffer_size": 1697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								840,
+								840
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templates/admin/pagination.html",
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/admin/templatetags/log.py",
+					"settings":
+					{
+						"buffer_size": 540,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								540,
+								540
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/debug_toolbar/templates/debug_toolbar/panels/settings_vars.html",
+					"settings":
+					{
+						"buffer_size": 341,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/contrib/debug_toolbar/templates/debug_toolbar/panels/sql.html",
+					"settings":
+					{
+						"buffer_size": 2796,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2224,
+								2224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/Users/syrus/Proyectos/djinja/djinja/template/defaultfilters.py",
+					"settings":
+					{
+						"buffer_size": 4783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								515
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0,
+						"translation.y": 151,
+						"zoom_level": 1
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0
+	},
+	"input":
+	{
+		"height": 0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+			[
+				"11",
+				"11/program.py"
+			],
+			[
+				"progra",
+				"1/program.py"
+			]
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 500,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/syrus/Sites/syrusakbary/syrusakbary.sublime-project"
+			]
+		],
+		"width": 380
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225,
+	"status_bar_visible": true
+}
